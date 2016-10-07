@@ -23,7 +23,7 @@ then
         exit 1
     fi
 
-    VERSION=`git describe --always`
+    VERSION=-`git describe --always`
     popd
 fi
 
@@ -49,7 +49,7 @@ then
         then
             continue
         fi
-        tag="trial$I-$VERSION"
+        tag="trial$I$VERSION"
         break
     done
     echo "tag generated: $tag"
