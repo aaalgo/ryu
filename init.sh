@@ -1,23 +1,30 @@
-tag=$1
+#!/bin/bash
 
 good=1
 if [ -z "$RYU_HOME" ]
 then
-    echo "missing environment variable RYU_HOME"
-    echo "RYU_HOME should be set so that $$RYU_HOME/init.sh is this file."
+    echo 'Environment variable RYU_HOME should be set so that $RYU_HOME/init.sh is this file.'
     good=
 fi
 if [ -z "$SYNAPSE_ID" ]
 then
-    echo "missing environment variable SYNAPSE_ID"
-    echo "SYNAPSE_ID should be your project ID"
+    echo "Environment variable SYNAPSE_ID should be your project ID"
     good=
 fi
-if nvidia-docker --version
-then
-    true
-else
+if docker --version >& /dev/null ; then true ; else
+    echo missing docker
+    good=
+fi
+if nvidia-docker --version >& /dev/null ; then true; else
     echo "missing nvidia-docker"
+    good=
+fi
+if python3 --version >& /dev/null ; then true; else
+    echo "missing virtualenv"
+    good=
+fi
+if virtualenv --version >& /dev/null ; then true; else
+    echo "missing virtualenv"
     good=
 fi
 
