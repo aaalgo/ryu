@@ -151,7 +151,8 @@ $ tar jxvf log.tar.bz2
 Note that all your STDOUT/STDERR log will still be delivered before
 this base64-encoded log, and the 1MB limitation applies to the sum of both.
 You need to make sure you do not exceed this limitation, or the base64
-encoding will be truncated and you'll get nothing from your log directory.
+encoding will be truncated and you'll be able to extract nothing
+from your log directory.
 
 
 # Model Submition
