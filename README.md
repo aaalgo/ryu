@@ -16,7 +16,6 @@ Ryu assumes the preprocessing-training workflow.
 
 # Installation
 
-
 This software depends on the following packages:
 
 - python3 and virtualenv
@@ -72,6 +71,11 @@ You can make the following assumption when your scripts are invoked.
 
 
 ## Run algorithms on host machine
+
+!!! DO NOT USE root ACCOUNT FOR RUNNING THE WORKFLOW.
+!!! YOU HAVE BEEN WARNED.
+
+
 ```bash
 cd $RYU_HOME
 ./prep.sh  tag
