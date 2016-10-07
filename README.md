@@ -98,7 +98,7 @@ You can also use `docker-bash.sh` to open a shell within docker.
 # Logging and Data Retrieval
 
 The DREAM workflow restrict data feedback to STDOUT/STDERR output.
-This is not the most convenient way of communication.  To ease
+This is not the most convenient way of communication.  For
 more flexible logging, Ryu allows sending back a small amount of
 files using base64 encoding.
 After your scripts finish running, all files your put into the
