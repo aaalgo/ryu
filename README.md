@@ -92,6 +92,8 @@ cd $RYU_HOME
 ````
 Data will be saved to directories under `$RYU_HOME/state/$tag.v`.
 
+You can also use `docker-bash.sh` to open a shell within docker.
+
 
 # Logging and Data Retrieval
 
