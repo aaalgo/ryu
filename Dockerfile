@@ -8,7 +8,8 @@ RUN pip install pydicom
 #RUN pip install tflearn #git+https://github.com/tflearn/tflearn.git
 
 ADD dmdc /dmdc
-ADD stub/train.sh stub/preprocess.sh /stub/env.sh /
+ADD stub /stub
+ADD stub/train.sh stub/preprocess.sh /
 WORKDIR /
 #COPY DREAM_DM_starter_tf.py .
 #COPY train.sh .

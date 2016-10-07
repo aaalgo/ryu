@@ -1,13 +1,7 @@
-#!/bin/sh
+#!/bin/bash
 
 . $RYU_HOME/stub/env.sh
 
-dmdc/preprocess.sh 2>&1 | tee log.txt
+./preprocess.sh 2>&1 | tee $RYU_STATE/log.txt
 
-cd $RYU_WORKSPACE
-tar jcf log.tar.bz2 $LOG_DIR
-echo AAAAAAAAAA
-base64 < log.tar.bz2
-echo BBBBBBBBBB
-
-
+$RYU_HOME/stub/wrapup.sh
