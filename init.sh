@@ -4,6 +4,8 @@ good=1
 if [ ! -e dmdc ]
 then
     echo dmdc directory not found, you need to create/symlink it.
+    echo For testing purpose, link with this command and run init.sh again:
+    echo ln -s dmdc-sample dmdc
     good=
 fi
 if [ -z "$RYU_HOME" ]
