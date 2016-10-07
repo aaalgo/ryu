@@ -156,6 +156,8 @@ encoding will be truncated and you'll get nothing from your log directory.
 
 # Model Submition
 
+You'll have to add your software to Dockerfile.
+
 After you have tested your model locally, you can submit the model with
 ```
 ./docker-submit.sh
